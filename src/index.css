@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus-visible {
+  outline: rgba(0, 82, 142, 0.5) auto 1px;
+}
+
+@import url(./App.css);
+@import url(./components/Header/Header.css);
+@import url(./components/Navigation/Navigation.css);
+@import url(./views/Main/Main.css);
+@import url(./views/DisciplineList/DisciplineList.css);
+@import url(./components/InputsItem/InputsItem.css);
+@import url(./components/CleanInput/CleanInput.css);
+@import url(./views/DisciplineDetails/Discipline.css);

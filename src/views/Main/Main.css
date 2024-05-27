@@ -1,0 +1,37 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.link {
+  width: 396px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  justify-content: center;
+}
+
+.link--white {
+  background: #ffffff;
+  border: 1px solid #f1f1f1;
+  color: #000000;
+}
+
+.link--black {
+  margin-top: 24px;
+  box-sizing: border-box;
+  background: #37313a;
+  border: 1px solid #f1f1f1;
+  color: #ffffff;
+}

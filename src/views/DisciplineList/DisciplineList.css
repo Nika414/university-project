@@ -1,0 +1,47 @@
+.discipline-list__header {
+  margin: 46px 0 0 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #37313a;
+}
+
+.discipline-list__button {
+  width: 190px;
+  height: 21px;
+  margin-top: 24px;
+  border: 1px solid #37313a;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #37313a;
+}
+
+.discipline-list__inputs-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 44px;
+}
+
+.discipline-list__titles-wrapper {
+    display: flex;
+    width: 986px;
+}
+
+.discipline-list__title {
+  width: 396px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #37313a;
+  margin: 0 0 15px 0;
+}
