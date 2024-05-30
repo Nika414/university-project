@@ -1,3 +1,9 @@
+.main {
+  background-image: url('../../assets/images/bcg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .links {
   display: flex;
   flex-direction: column;

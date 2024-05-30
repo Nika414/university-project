@@ -1,8 +1,15 @@
+html {
+  height: 100%;
+}
+
 body {
+  background-color: #f2f2f2; /* серый фон */
+  margin: 0; /* убрать отступы */
+  height: 100%; /* высота на 100% */
   margin: 0;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,6 +28,40 @@ input:focus-visible {
   outline: rgba(0, 82, 142, 0.5) auto 1px;
 }
 
+button {
+  background: transparent;
+  border: 0;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.grid-container {
+  padding-top: 50px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 69px repeat(16, 58px);
+  grid-template-rows: 95px repeat(2, 22px);
+}
+
+.grid-item {
+  padding: 5px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #37313a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-row {
+  /* transform: rotate(-90deg); */
+  writing-mode: vertical-lr;
+}
+
 @import url(./App.css);
 @import url(./components/Header/Header.css);
 @import url(./components/Navigation/Navigation.css);
@@ -29,3 +70,6 @@ input:focus-visible {
 @import url(./components/InputsItem/InputsItem.css);
 @import url(./components/CleanInput/CleanInput.css);
 @import url(./views/DisciplineDetails/Discipline.css);
+@import url(./components/DisciplineDetailsForm/DisciplineDetailsForm.css);
+@import url(./components/StudentGroupForm/StudentGroupForm.css);
+@import url(./components/ErrorComponent/ErrorComponent.css);

@@ -1,0 +1,24 @@
+.discipline__form {
+  width: 1091px;
+  height: 316px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 600px;
+}
+
+.discipline__button {
+  width: 267px;
+  height: 74px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #37313a;
+  position: absolute;
+  left: 44px;
+  bottom: 57px;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Main = () => (
-  <div>
+  <div className="main">
     <div className="links">
       <NavLink to="#" className="link link--white">
         Нагрузка кафедры

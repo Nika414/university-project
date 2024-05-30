@@ -1,0 +1,36 @@
+.discipline__students-amount-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 17px;
+}
+
+.discipline__information-block {
+    width: 266px;
+    height: 93px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #37313A;
+    gap: 10px;
+}
+
+.discipline__students-amount-input {
+    width: 65px;
+    height: 23px;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #37313A;
+}

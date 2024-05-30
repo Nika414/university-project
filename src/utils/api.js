@@ -67,4 +67,34 @@ export const getStudentGroupData = async (id) => {
   return response.json();
 };
 
-export const useStudentGroupDataQuery = (id) => useQuery(['student-group-data'], () => getStudentGroupData(id), { staleTime: 0 });
+export const useStudentGroupDataQuery = (id) => useQuery(['student-group-data'], () => getStudentGroupData(id), {
+  staleTime: 0,
+});
+
+export const updateDiscipline = async (body) => {
+  const url = new URL(`${BASE_URL}/api/Discipline`);
+
+  const response = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+
+  return response.json();
+};
+
+export const updateStudentGroup = async (body) => {
+  const url = new URL(`${BASE_URL}/api/StudentGroup`);
+
+  const response = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+
+  return response.json();
+};
