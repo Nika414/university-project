@@ -1,34 +1,27 @@
 import React, { useState } from 'react';
-import { createDiscipline } from '../../utils/api';
-import { DEFAULT_NEW_DISCIPLINE_VALUES } from '../../constants';
 
 const CleanInput = (props) => {
-  const { setIsCleanInput, refetch } = props;
-  const [disciplineName, setDisciplineName] = useState('');
-  const [disciplineLoad, setDisciplineLoad] = useState('');
+  const { handleSubmit } = props;
+  const [name, seteName] = useState('');
+  const [details, setDetails] = useState('');
 
   const onNameChange = (e) => {
-    setDisciplineName(e.target.value);
+    seteName(e.target.value);
   };
 
-  const onLoadChange = (e) => {
-    setDisciplineLoad(e.target.value);
+  const onDetailsChange = (e) => {
+    setDetails(e.target.value);
   };
 
-  const handleSubmit = async () => {
-    try {
-      await
-      createDiscipline({ ...DEFAULT_NEW_DISCIPLINE_VALUES, diciplineName: disciplineName, allHours: disciplineLoad });
-      await refetch();
-      setIsCleanInput(false);
-    } catch (err) { console.log(err); }
+  const onSubmit = () => {
+    handleSubmit({ name, details });
   };
 
   return (
     <div className="clean-input">
       <input className="clean-input__input" onChange={onNameChange} />
-      <input className="clean-input__input" onChange={onLoadChange} />
-      <button type="submit" className="clean-input__button" onClick={handleSubmit}>
+      <input className="clean-input__input" onChange={onDetailsChange} />
+      <button type="submit" className="clean-input__button" onClick={onSubmit}>
         Сохранить
       </button>
     </div>

@@ -1,9 +1,9 @@
-.discipline__form {
-  width: 1091px;
-  height: 316px;
-  background: #ffffff;
-  border-radius: 10px;
-  margin-bottom: 600px;
+.discipline__grid-container {
+  padding-top: 50px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 69px repeat(16, 58px);
+  grid-template-rows: 95px repeat(2, 22px);
 }
 
 .discipline__button {
@@ -18,7 +18,4 @@
   line-height: 17px;
   text-align: center;
   color: #37313a;
-  position: absolute;
-  left: 44px;
-  bottom: 57px;
 }

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => (
   <nav className="navigation">
     <NavLink to="disciplines">Дисциплины</NavLink>
-    <NavLink to="#">Учебные планы</NavLink>
+    <NavLink to="departments">Учебные планы</NavLink>
     <NavLink to="#">Нагрузка кафедры</NavLink>
   </nav>
 );

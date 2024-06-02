@@ -1,25 +1,16 @@
-.discipline__header {
-  margin: 46px 0 0 44px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 27px;
-  color: #37313a;
-}
-
-.discipline__content-wrapper {
+.discipline__information-block {
+  width: 266px;
+  height: 93px;
   display: flex;
-  justify-content: space-around;
-  margin-top: 60px;
-}
-
-.discipline__information-block-wrapper {
-  position: relative;
-}
-.discipline__load-header {
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 10px;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 17px;
   color: #37313a;
+  gap: 10px;
 }

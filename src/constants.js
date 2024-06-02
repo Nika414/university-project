@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://109.248.175.78:5001';
+export const BASE_URL = 'http://51.250.21.144:5001';
 
 export const DEFAULT_NEW_DISCIPLINE_VALUES = {
   lecturesAccodingToPlan: 0,
@@ -40,4 +40,29 @@ export const DEFAULT_NEW_DISCIPLINE_VALUES = {
   educationalPracticeFlag: true,
   productionPracticeFlag: true,
   postgraduateAndMasterDegreeFlag: true,
+};
+
+export const DEFAULT_NEW_DEPARTMENT_WORK_VALUES = {
+  diciplineId: 0,
+  groupId: 0,
+  courseProject: 0,
+  testsReview: 0,
+  exams: 0,
+  courseWork: 0,
+  inZe: 0,
+  inHours: 0,
+  lecturesTotal: 0,
+  labWorkTotal: 0,
+  practiceTotal: 0,
+  individualSessions: 0,
+  modularRatingSystem: 0,
+  consultations: 0,
+  offsets: 0,
+  educationalPractice: 0,
+  productionPractice: 0,
+  diplomaDesign: 0,
+  gekgak: 0,
+  postgraduateAndMasterDegree: 0,
+  totalHours: 0,
+  budgetFlag: true,
 };

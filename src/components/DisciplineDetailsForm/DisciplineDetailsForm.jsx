@@ -71,7 +71,7 @@ const DisciplineDetailsForm = (props) => {
   return (
     <FormProvider {...formMethods}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="discipline__form grid-container">
+        <div className="form discipline__grid-container">
           <div className="grid-item title-row" />
           <div className="grid-item title-row">Лекции</div>
           <div className="grid-item title-row">Лаб-е</div>

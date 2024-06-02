@@ -98,3 +98,72 @@ export const updateStudentGroup = async (body) => {
 
   return response.json();
 };
+
+export const getDepartmentsWork = async () => {
+  const url = new URL(`${BASE_URL}/api/DepartmentWork`);
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Error while fetching data');
+  }
+
+  return response.json();
+};
+
+export const useDepartmentsWorkQuery = () => useQuery(['departments'], () => getDepartmentsWork(), { staleTime: 0 });
+
+export const removeDepartmentWork = async (departmentId) => {
+  const url = new URL(`${BASE_URL}/api/DepartmentWork/${departmentId}`);
+
+  const response = await fetch(url, { method: 'DELETE' });
+  if (!response.ok) {
+    throw new Error('Error while fetching data');
+  }
+
+  return response.json();
+};
+
+export const getDepartmentWorkById = async (departmentId) => {
+  const url = new URL(`${BASE_URL}/api/DepartmentWork/${departmentId}`);
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Error while fetching data');
+  }
+
+  return response.json();
+};
+
+export const useDepartmentWorkByIdQuery = (departmentId) => useQuery(
+  ['department-work', departmentId],
+  () => getDepartmentWorkById(departmentId),
+  { staleTime: 0 },
+);
+
+export const createDepartmentWork = async (body) => {
+  const url = new URL(`${BASE_URL}/api/DepartmentWork`);
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+
+  return response.json();
+};
+
+export const updateDepartmentWork = async (body) => {
+  const url = new URL(`${BASE_URL}/api/DepartmentWork`);
+
+  const response = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+
+  return response.json();
+};

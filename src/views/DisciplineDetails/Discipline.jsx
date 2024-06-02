@@ -22,20 +22,20 @@ const Discipline = () => {
     data
     && studentGroupData && (
       <div>
-        <h3 className="discipline__header">{data.diciplineName}</h3>
-        <div className="discipline__content-wrapper">
-          <div className="discipline__information-block-wrapper">
+        <h3 className="detalization__header">{data.diciplineName}</h3>
+        <div className="detalization__content-wrapper">
+          <div>
             <div className="discipline__information-block">
               <span>
-                {`Кол-во потоков: ${studentGroupData.numberOfStreams}`}
+                {`Кол-во потоков: ${studentGroupData.value.numberOfStreams}`}
               </span>
-              <span>{`Кол-во групп: ${studentGroupData.numberOfGroups}`}</span>
+              <span>{`Кол-во групп: ${studentGroupData.value.numberOfGroups}`}</span>
               <span>
-                {`Кол-во подгрупп: ${studentGroupData.numberOfSubgroups}`}
+                {`Кол-во подгрупп: ${studentGroupData.value.numberOfSubgroups}`}
               </span>
             </div>
             <StudentGroupForm
-              data={studentGroupData}
+              data={studentGroupData.value}
               setNumberOfStudentsBudget={setNumberOfStudentsBudget}
               setNumberOfStudentsPaid={setNumberOfStudentsPaid}
               isFormDisabled={isFormDisabled}
@@ -43,7 +43,7 @@ const Discipline = () => {
           </div>
 
           <div>
-            <h4 className="discipline__load-header">Часы нагрузки</h4>
+            <h4 className="detalization__table-header">Часы нагрузки</h4>
             <div>
               <DisciplineDetailsForm
                 setIsError={setIsError}
@@ -52,7 +52,7 @@ const Discipline = () => {
                 setIsFormDisabled={setIsFormDisabled}
                 refetch={refetch}
                 studentGroupData={{
-                  ...studentGroupData,
+                  ...studentGroupData.value,
                   numberOfStudentsBudget,
                   numberOfStudentsPaid,
                 }}

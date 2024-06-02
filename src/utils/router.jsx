@@ -3,6 +3,8 @@ import Main from '../views/Main/Main';
 import DisciplineList from '../views/DisciplineList/DisciplineList';
 import Discipline from '../views/DisciplineDetails/Discipline';
 import App from '../App';
+import DepartmentWorkList from '../views/DepartmentWorkList/DepartmentWorkList';
+import DepartmentWorkDetails from '../views/DepartmentWorkDetails/DepartmentWorkDetails';
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ export const router = createBrowserRouter([
       {
         path: 'disciplines',
         element: <DisciplineList />,
+      },
+      {
+        path: 'departments',
+        element: <DepartmentWorkList />,
+      },
+      {
+        path: 'department/:id',
+        element: <DepartmentWorkDetails />,
       },
     ],
   },

@@ -3,9 +3,9 @@ html {
 }
 
 body {
-  background-color: #f2f2f2; /* серый фон */
-  margin: 0; /* убрать отступы */
-  height: 100%; /* высота на 100% */
+  background-color: #f2f2f2;
+  margin: 0;
+  height: 100%;
   margin: 0;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
@@ -32,16 +32,9 @@ button {
   background: transparent;
   border: 0;
 }
+
 button:hover {
   cursor: pointer;
-}
-
-.grid-container {
-  padding-top: 50px;
-  padding-left: 10px;
-  display: grid;
-  grid-template-columns: 69px repeat(16, 58px);
-  grid-template-rows: 95px repeat(2, 22px);
 }
 
 .grid-item {
@@ -62,14 +55,126 @@ button:hover {
   writing-mode: vertical-lr;
 }
 
+.list__header {
+  margin: 46px 0 0 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #37313a;
+}
+
+.list__button {
+  width: 190px;
+  height: 21px;
+  margin-top: 24px;
+  border: 1px solid #37313a;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #37313a;
+}
+
+.list__inputs-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 44px;
+}
+
+.list__titles-wrapper {
+  display: flex;
+  width: 986px;
+}
+
+.list__title {
+  width: 396px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #37313a;
+  margin: 0 0 15px 0;
+}
+
+.inputs__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs-item__input {
+  width: 390px;
+  height: 34px;
+  background: #ffffff;
+  border: 1px solid #f1f1f1;
+}
+
+.inputs-item__buttons {
+  display: flex;
+  gap: 5px;
+  margin-left: 5px;
+}
+
+.inputs-item__button {
+  width: 89px;
+  height: 21px;
+  box-sizing: border-box;
+  border: 1px solid #37313a;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #37313a;
+}
+
+.detalization__header {
+  margin: 46px 0 0 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #37313a;
+}
+
+.detalization__content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.detalization__table-header {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #37313a;
+}
+
+.form {
+  width: 1091px;
+  height: 316px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
 @import url(./App.css);
 @import url(./components/Header/Header.css);
 @import url(./components/Navigation/Navigation.css);
 @import url(./views/Main/Main.css);
-@import url(./views/DisciplineList/DisciplineList.css);
-@import url(./components/InputsItem/InputsItem.css);
 @import url(./components/CleanInput/CleanInput.css);
-@import url(./views/DisciplineDetails/Discipline.css);
 @import url(./components/DisciplineDetailsForm/DisciplineDetailsForm.css);
 @import url(./components/StudentGroupForm/StudentGroupForm.css);
 @import url(./components/ErrorComponent/ErrorComponent.css);
+@import url(./components/DepartmentWorkDetailsForm/DepartmentWorkDetailsForm.css);
+@import url(./views/DisciplineDetails/Discipline.css);
