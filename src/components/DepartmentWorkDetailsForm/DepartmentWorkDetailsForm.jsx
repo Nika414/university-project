@@ -1,13 +1,10 @@
 import { FormProvider, useForm } from 'react-hook-form';
 import { updateDepartmentWork } from '../../utils/api';
+import { BASE_URL } from '../../constants';
 
 const DepartmentWorkDetailsForm = (props) => {
   const {
-    data,
-    isFormDisabled,
-    setIsFormDisabled,
-    refetch,
-    setIsError,
+    data, isFormDisabled, setIsFormDisabled, refetch, setIsError,
   } = props;
   const formMethods = useForm({
     defaultValues: {
@@ -39,6 +36,29 @@ const DepartmentWorkDetailsForm = (props) => {
       console.log(err);
       setIsError(true);
     }
+  };
+
+  const onDownload = () => {
+    fetch(`${BASE_URL}/api/DepartmentWork/${data.id}/excel`)
+      .then((response) => {
+        if (response.ok) {
+          return response.blob();
+        }
+        throw new Error('Ошибка при загрузке файла');
+      })
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'DepartmentWork.xlsx');
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.URL.revokeObjectURL(url);
+      })
+      .catch((error) => {
+        console.error('Ошибка при загрузке файла:', error);
+      });
   };
 
   return (
@@ -149,6 +169,7 @@ const DepartmentWorkDetailsForm = (props) => {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
+              onDownload();
             }}
           >
             Экспортировать отчёт (.xls)
